@@ -36,7 +36,7 @@ Create a `.env` file in the root directory. Use `.env.example` as a reference:
 
 ```env
 PORT=3000
-
+MONGODB_URI=MongoDB connection string
 ```
 
 ### Run the Server
@@ -190,7 +190,7 @@ All errors return a consistent JSON shape:
 {
   "success": false,
   "message": "Descriptive error message",
-  "errors": []
+  "statusCode": "common status codes are 400, 404, 500"
 }
 ```
 
