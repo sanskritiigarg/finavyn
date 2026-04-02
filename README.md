@@ -65,6 +65,7 @@ Full request/response details are available in the Postman collection at `docs/p
 |--------|-------|--------|-------------|
 | POST | `/api/auth/register` | Public | Register a new user |
 | POST | `/api/auth/login` | Public | Login and receive a JWT |
+| GET |  `/api/auth/profile` | All roles | Get user's profile |
 
 ### Admin
 
