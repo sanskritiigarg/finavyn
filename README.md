@@ -37,6 +37,8 @@ Create a `.env` file in the root directory. Use `.env.example` as a reference:
 ```env
 PORT=3000
 MONGODB_URI=MongoDB connection string
+JWT_SECRET=a string
+JWT_EXPIRE=token expiration time after creation
 ```
 
 ### Run the Server
@@ -64,7 +66,7 @@ Full request/response details are available in the Postman collection at `docs/p
 | POST | `/api/auth/register` | Public | Register a new user |
 | POST | `/api/auth/login` | Public | Login and receive a JWT |
 
-### Users
+### Admin
 
 | Method | Route | Access | Description |
 |--------|-------|--------|-------------|
