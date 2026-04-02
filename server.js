@@ -1,7 +1,7 @@
 import express from 'express';
 import dotenv from 'dotenv';
 import cors from 'cors';
-import errorHandler from './middlewares/errorHandler.middleware.js';
+import errorHandler from './middlewares/errorHandler.middlewares.js';
 import connectDB from './config/db.js';
 
 dotenv.config();
@@ -20,6 +20,13 @@ app.use(express.urlencoded({ extended: true }));
 
 // Connect to Database
 connectDB();
+
+// API Routes
+import authRoutes from './routes/auth.routes.js';
+import adminRoutes from './routes/admin.routes.js';
+
+app.use('/api/auth', authRoutes);
+app.use('/api/admin', adminRoutes)
 
 app.use(errorHandler);
 
