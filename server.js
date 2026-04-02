@@ -2,6 +2,7 @@ import express from 'express';
 import dotenv from 'dotenv';
 import cors from 'cors';
 import errorHandler from './middlewares/errorHandler.middleware.js';
+import connectDB from './config/db.js';
 
 dotenv.config();
 const app = express();
@@ -16,6 +17,9 @@ app.use(
 );
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
+// Connect to Database
+connectDB();
 
 app.use(errorHandler);
 
