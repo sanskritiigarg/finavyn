@@ -23,10 +23,10 @@ connectDB();
 
 // API Routes
 import authRoutes from './routes/auth.routes.js';
-import adminRoutes from './routes/admin.routes.js';
+import userRoutes from './routes/users.routes.js';
 
 app.use('/api/auth', authRoutes);
-app.use('/api/admin', adminRoutes)
+app.use('/api/users', userRoutes)
 
 app.use(errorHandler);
 
