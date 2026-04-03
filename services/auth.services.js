@@ -1,7 +1,7 @@
 import jwt from 'jsonwebtoken';
 import User from '../models/user.models.js';
 
-const generateToken = (id) => {
+const generateToken = (id, role) => {
   return jwt.sign({ id, role }, process.env.JWT_SECRET, {
     expiresIn: process.env.JWT_EXPIRE || '7d',
   });
@@ -17,7 +17,8 @@ const registerUser = async ({ name, email, password }) => {
     throw error;
   }
 
-  const user = await User.create({ name, email, password });
+  const role = "viewer"
+  const user = await User.create({ name, email, password, role });
   const token = generateToken(user._id, role);
 
   return {
