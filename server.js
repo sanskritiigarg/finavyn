@@ -25,10 +25,12 @@ connectDB();
 import authRoutes from './routes/auth.routes.js';
 import userRoutes from './routes/users.routes.js';
 import recordRoutes from './routes/records.routes.js';
+import dashboardRoutes from './routes/dashboard.routes.js';
 
 app.use('/api/auth', authRoutes);
 app.use('/api/users', userRoutes);
 app.use('/api/records', recordRoutes);
+app.use('/api/dashboard', dashboardRoutes);
 
 app.use(errorHandler);
 
