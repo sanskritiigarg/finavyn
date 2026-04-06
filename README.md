@@ -35,6 +35,7 @@ npm install
 Create a `.env` file in the root directory. Use `.env.example` as a reference:
 
 ```env
+NODE_ENV=development (or production if deployed)
 PORT=3000
 MONGODB_URI=MongoDB connection string
 JWT_SECRET=a string
@@ -157,7 +158,7 @@ FINAVYN/
 │   ├── record.routes.js
 │   └── dashboard.routes.js
 ├── docs/
-│   └── postman_collection.json
+│   └── Finavyn.postman_collection.json
 ├── .env.example
 ├── .gitignore
 ├── package.json
@@ -211,7 +212,7 @@ All errors return a consistent JSON shape:
 
 ## Optional Features Implemented
 
-- [x] JWT Authentication
-- [x] Soft delete for users and records
-- [x] Pagination on record listing
-- [x] Filtering by date range, type, and category
+- JWT Authentication
+- Soft delete for users and records
+- Pagination on record listing
+- Filtering by date range, type, and category
